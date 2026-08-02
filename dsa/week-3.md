@@ -8,6 +8,8 @@
 
 **Daily shape:** Cold open 10m → Learn 25m → **Blank page 5m** → Problems 60m → Teach-back 5m → Ledger 2m.
 
+**Finding problems:** **neetcode.io/practice**. `BS 3` = *Binary Search* section, 3rd problem. `LL 9` = *Linked List*, 9th.
+
 ---
 
 ## Concepts
@@ -125,7 +127,7 @@ fast →→ two steps       per move on slow — so it MUST catch up.
 
 Three uses: **cycle detection** (do they meet?), **middle node** (when fast ends, slow is at the middle), **cycle start** (after meeting, reset one pointer to head and walk both at speed 1 — they meet at the entrance).
 
-**The Gotcha:** LC 287 (Find the Duplicate) is this algorithm on an *array*, where `i → nums[i]` is the "next pointer." Nothing about it looks like a linked list. That disguise is the entire test.
+**The Gotcha:** Find the Duplicate Number (LL 8) is this algorithm on an *array*, where `i → nums[i]` is the "next pointer." Nothing about it looks like a linked list. That disguise is the entire test.
 
 **Recall prompt:** *Why must fast and slow meet if a cycle exists?*
 
@@ -138,59 +140,59 @@ Three uses: **cycle detection** (do they meet?), **middle node** (when fast ends
 **Learn:** C-14.
 **Exercise (10 min):** type the template from memory, 3 times, closing the file between attempts. Yes, three.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 704 | Binary Search | The template, verbatim. 5 minutes. | 10m |
-| 74 | Search a 2D Matrix | Treat it as one flat sorted array of length `m*n`. Convert: `row = mid // n`, `col = mid % n`. | 20m |
+| BS 1 | Binary Search | The template, verbatim. 5 minutes. | 10m |
+| BS 2 | Search a 2D Matrix | Treat it as one flat sorted array of length `m*n`. Convert: `row = mid // n`, `col = mid % n`. | 20m |
 
 ### D16 — On the answer
 **Cold open:** ① C-14 anchor? ② Where do `+1`/`-1` go? ③ *(W2)* Monotonic stack — store what?
 **Learn:** C-15.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 875 | Koko Eating Bananas | Write `hours_needed(speed)` **first**, alone. Then binary search 1…max(piles). | 25m |
-| 153 | Find Min in Rotated Array | Compare `nums[mid]` to `nums[hi]`, not `nums[lo]`. Cleaner, fewer cases. | 20m |
+| BS 3 | Koko Eating Bananas | Write `hours_needed(speed)` **first**, alone. Then binary search 1…max(piles). | 25m |
+| BS 4 | Find Min in Rotated Array | Compare `nums[mid]` to `nums[hi]`, not `nums[lo]`. Cleaner, fewer cases. | 20m |
 
 ### D17 — Rotation
 **Cold open:** ① C-15 anchor (Hinglish counts)? ② Two phrasings that mean "search the answer"? ③ *(D15)* Template from memory.
 **Learn:** C-16.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 33 | Search in Rotated Sorted Array | Find the sorted half, ask if the target is inside it. Draw the two runs before coding. | 30m |
-| 981 | Time Based Key-Value Store | `defaultdict(list)` + binary search on timestamps for the largest value ≤ target. | 25m |
+| BS 5 | Search in Rotated Sorted Array | Find the sorted half, ask if the target is inside it. Draw the two runs before coding. | 30m |
+| BS 6 | Time Based Key-Value Store | `defaultdict(list)` + binary search on timestamps for the largest value ≤ target. | 25m |
 
 ### D18 — Pointers
 **Cold open:** ① C-16 anchor? ② Which comparison finds the sorted half? ③ *(D16)* Koko — what's the helper function?
 **Learn:** C-17, C-18.
-**Exercise (10 min, paper):** draw `1→2→3→None`. Redraw the arrows after *each* of the four reversal lines. Then code 206 without looking.
+**Exercise (10 min, paper):** draw `1→2→3→None`. Redraw the arrows after *each* of the four reversal lines. Then code Reverse Linked List without looking.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 206 | Reverse Linked List | Pure C-17. Do it iteratively, then recursively. Both should become automatic. | 15m |
-| 21 | Merge Two Sorted Lists | Dummy node (C-18). Attach the remainder at the end — don't loop it out. | 15m |
-| 143 | Reorder List | Three steps: find middle → reverse second half → interleave. Three things you already know, stacked. | 30m |
+| LL 1 | Reverse Linked List | Pure C-17. Do it iteratively, then recursively. Both should become automatic. | 15m |
+| LL 2 | Merge Two Sorted Lists | Dummy node (C-18). Attach the remainder at the end — don't loop it out. | 15m |
+| LL 3 | Reorder List | Three steps: find middle → reverse second half → interleave. Three things you already know, stacked. | 30m |
 
 ### D19 — Fast & slow
 **Cold open:** ① C-17 — four lines in order? ② C-18 — what do you return? ③ *(D17)* Sorted-half comparison?
 **Learn:** C-19.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 19 | Remove Nth From End | Fast goes `n` ahead, then both walk together. Dummy node handles "remove the head." | 20m |
-| 141 | Linked List Cycle | Floyd's, five lines. | 10m |
-| 287 | Find the Duplicate Number | Floyd's on an array. `i → nums[i]` is the pointer. Read C-19's Gotcha again before starting. | 30m |
+| LL 4 | Remove Nth From End | Fast goes `n` ahead, then both walk together. Dummy node handles "remove the head." | 20m |
+| LL 7 | Linked List Cycle | Floyd's, five lines. | 10m |
+| LL 8 | Find the Duplicate Number | Floyd's on an array. `i → nums[i]` is the pointer. Read C-19's Gotcha again before starting. | 30m |
 
 ### D20 — Building things
 **Cold open:** ① C-19 anchor? ② Why must fast and slow meet? ③ *(D18)* Dummy node — when?
 **Learn:** nothing new. Today is pure application — that's deliberate.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 2 | Add Two Numbers | Dummy node + a `carry`. Loop while `l1 or l2 or carry`. | 20m |
-| 138 | Copy List with Random Pointer | Two passes with a `{old_node: new_node}` dict. Pass 1 clones, pass 2 wires pointers. | 25m |
-| 146 | LRU Cache | Dict + doubly linked list. **A genuine interview favourite — expect it.** Use dummy head *and* dummy tail; it removes every edge case. | 40m |
+| LL 6 | Add Two Numbers | Dummy node + a `carry`. Loop while `l1 or l2 or carry`. | 20m |
+| LL 5 | Copy List w/ Random Pointer | Two passes with a `{old_node: new_node}` dict. Pass 1 clones, pass 2 wires pointers. | 25m |
+| LL 9 | LRU Cache | Dict + doubly linked list. **A genuine interview favourite — expect it.** Use dummy head *and* dummy tail; it removes every edge case. | 40m |
 
 ### D21 — Consolidation + Gate. **No new material.**
 
@@ -200,19 +202,19 @@ Three uses: **cycle detection** (do they meet?), **middle node** (when fast ends
 
 **Part A — Blank page (15 min).** All 6 anchors + the binary search template + the 4 reversal lines, from memory. Pass = template perfect, 5/6 anchors.
 
-**Part B — Cold problems (45 min).** From an empty file: **33**, **206**, **875**. Pass = 2/3 working, and the template typed without hesitation.
+**Part B — Cold problems (45 min).** From an empty file: **Search in Rotated Sorted Array**, **Reverse Linked List**, **Koko Eating Bananas**. Pass = 2/3 working, and the template typed without hesitation.
 
 **Part C — Out loud (10 min).** Explain **Floyd's cycle detection** in 2 minutes — including *why* they must meet. This is asked verbatim in interviews.
 
 **Part D — Mistake replay (20 min).** Every `mistakes.md` row from D15–D20, cold.
 
-**Part E — Interleaved set (20 min).** Name the pattern only, don't solve: LC 875 · LC 3 · LC 143 · LC 42 · LC 739 · LC 128.
+**Part E — Interleaved set (20 min).** Name the pattern only, don't solve: *Koko Eating Bananas · Longest Substring w/o Repeat · Reorder List · Trapping Rain Water · Daily Temperatures · Longest Consecutive Sequence*.
 
 ### 🔵 Stretch — only if the gate passed and nothing is overdue
-| # | Problem | Guidance |
+| NeetCode | Problem | Guidance |
 |---|---|---|
-| 4 | Median of Two Sorted Arrays | Genuinely hard. Binary search on the *partition*, not the values. Skip without guilt if short on time. |
-| 23 | Merge k Sorted Lists | Divide & conquer pairs, or a heap (Week 6 preview). |
-| 25 | Reverse Nodes in k-Group | C-17 applied k at a time. Draw it, always. |
+| BS 7 | Median of Two Sorted Arrays | Genuinely hard. Binary search on the *partition*, not the values. Skip without guilt if short on time. |
+| LL 10 | Merge K Sorted Lists | Divide & conquer pairs, or a heap (Week 6 preview). |
+| LL 11 | Reverse Nodes in K Group | C-17 applied k at a time. Draw it, always. |
 
 Then update `ledger.md`.

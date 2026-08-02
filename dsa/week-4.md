@@ -8,6 +8,8 @@
 
 **Daily shape:** Cold open 10m → Learn 25m → **Blank page 5m** → Problems 60m → Teach-back 5m → Ledger 2m.
 
+**Finding problems:** **neetcode.io/practice**. `TR 11` = *Trees* section, 11th problem.
+
 ---
 
 ## Concepts
@@ -45,7 +47,7 @@ Almost every tree problem is this shape with a different `<identity>` and `<comb
 
 Ask one question before coding any tree problem: **does the child need to know something from above, or does the parent need something from below?** Down → add a parameter. Up → use the return value. Both → do both.
 
-**The Gotcha:** BST validation needs info going *down* (the low/high bounds). Checking only `left.val < node.val < right.val` locally is the single most common wrong answer to LC 98.
+**The Gotcha:** BST validation needs info going *down* (the low/high bounds). Checking only `left.val < node.val < right.val` locally is the single most common wrong answer to Validate BST.
 
 **Recall prompt:** *A child needs to know a bound from its ancestor. Return value or parameter?*
 
@@ -87,7 +89,7 @@ That `level_size` snapshot is what separates levels. Without it, you can't tell 
 
 Two facts do all the work: (1) each node carries an inherited range, and (2) **an inorder traversal of a BST is sorted** — which instantly solves "kth smallest."
 
-**The Gotcha:** LC 230 doesn't need a full traversal. Do an inorder walk and stop at the kth node. Sorting the whole tree wastes the BST property you were being tested on.
+**The Gotcha:** Kth Smallest doesn't need a full traversal. Do an inorder walk and stop at the kth node. Sorting the whole tree wastes the BST property you were being tested on.
 
 **Recall prompt:** *Two ways to validate a BST. Which one is correct and why is the other wrong?*
 
@@ -103,7 +105,7 @@ Height returned to parent = 1 + max(L, R)       ← what the PARENT needs
 
 When those two differ, keep a `self.best` (or `nonlocal best`), update it at every node, and return the *other* thing. Diameter, max path sum, and longest univalue path are all this exact pattern.
 
-**The Gotcha:** in LC 124, a negative subtree sum should contribute `0`, not its negative value — you're allowed to just not take that branch. Use `max(0, solve(child))`.
+**The Gotcha:** in Max Path Sum, a negative subtree sum should contribute `0`, not its negative value — you're allowed to just not take that branch. Use `max(0, solve(child))`.
 
 **Recall prompt:** *Diameter of a binary tree — what goes to the global, what goes to the parent?*
 
@@ -120,7 +122,7 @@ When those two differ, keep a `self.best` (or `nonlocal best`), update it at eve
 
 Preorder alone is ambiguous; preorder **with explicit nulls** is not. Deserialize with an index pointer and the same preorder order.
 
-**The Gotcha:** preorder + inorder (LC 105) also reconstructs a tree uniquely — but only when values are distinct. Know both, and know why each works.
+**The Gotcha:** preorder + inorder (TR 13) also reconstructs a tree uniquely — but only when values are distinct. Know both, and know why each works.
 
 **Recall prompt:** *Why can't you serialize a tree with preorder alone?*
 
@@ -132,57 +134,57 @@ Preorder alone is ambiguous; preorder **with explicit nulls** is not. Deserializ
 **Cold open:** ① *(W3)* C-19 anchor? ② Binary search template from memory. ③ Dummy node — what do you return?
 **Learn:** C-20.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 226 | Invert Binary Tree | Swap children, recurse. 5 lines. | 10m |
-| 104 | Maximum Depth | The template with identity `0`. Also do the BFS version — you'll need it on D24. | 15m |
-| 543 | Diameter | Your first taste of C-24. Struggle with it today; the concept lands properly on D26. | 25m |
+| TR 1 | Invert Binary Tree | Swap children, recurse. 5 lines. | 10m |
+| TR 2 | Maximum Depth | The template with identity `0`. Also do the BFS version — you'll need it on D24. | 15m |
+| TR 3 | Diameter | Your first taste of C-24. Struggle with it today; the concept lands properly on D26. | 25m |
 
 ### D23 — Up and down
 **Cold open:** ① C-20 skeleton, written out? ② What changes between tree problems? ③ *(W3)* Floyd's — why do they meet?
 **Learn:** C-21.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 110 | Balanced Binary Tree | Return height *and* balanced-ness together (a tuple, or `-1` as a sentinel). O(n), not O(n²). | 25m |
-| 100 | Same Tree | Two-tree recursion. Base cases first: both null, one null, values differ. | 10m |
-| 572 | Subtree of Another Tree | Uses `isSameTree` as a helper. Notice you're reusing yesterday's function — that's how real code works. | 20m |
+| TR 4 | Balanced Binary Tree | Return height *and* balanced-ness together (a tuple, or `-1` as a sentinel). O(n), not O(n²). | 25m |
+| TR 5 | Same Tree | Two-tree recursion. Base cases first: both null, one null, values differ. | 10m |
+| TR 6 | Subtree of Another Tree | Uses `isSameTree` as a helper. Notice you're reusing the function from ten minutes ago — that's how real code works. | 20m |
 
 ### D24 — BFS
 **Cold open:** ① C-21 anchor (Hinglish counts)? ② Bound from an ancestor — parameter or return? ③ *(D22)* C-20 skeleton?
 **Learn:** C-22.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 102 | Level Order Traversal | The C-22 template, verbatim. | 20m |
-| 199 | Right Side View | Same BFS, take the last node of each level. One-line change from 102 — notice that. | 20m |
+| TR 8 | Level Order Traversal | The C-22 template, verbatim. | 20m |
+| TR 9 | Right Side View | Same BFS, take the last node of each level. A one-line change from the previous problem — notice that. | 20m |
 
 ### D25 — BSTs
 **Cold open:** ① C-22 anchor? ② What do you snapshot before the inner loop? ③ *(D23)* Balanced tree in O(n) — how?
 **Learn:** C-23.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 235 | LCA of a BST | Walk down: both smaller → go left, both bigger → go right, else you're standing on the answer. | 15m |
-| 98 | Validate BST | Pass `(low, high)` down. Re-read C-21's Gotcha before you start. | 25m |
-| 230 | Kth Smallest in BST | Inorder, stop at k. Don't build the whole list. | 20m |
+| TR 7 | LCA of a BST | Walk down: both smaller → go left, both bigger → go right, else you're standing on the answer. | 15m |
+| TR 11 | Validate BST | Pass `(low, high)` down. Re-read C-21's Gotcha before you start. | 25m |
+| TR 12 | Kth Smallest in BST | Inorder, stop at k. Don't build the whole list. | 20m |
 
 ### D26 — Global answers
 **Cold open:** ① C-23 anchor? ② Two ways to validate a BST — which is wrong? ③ *(D24)* Why `deque` and not a list?
 **Learn:** C-24.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 1448 | Count Good Nodes | Max-so-far travels **down** as a parameter (C-21). Count travels up. | 20m |
-| 124 | Binary Tree Max Path Sum | The hardest tree problem. `max(0, child)` and a global best. Go back and re-do **543** right after — same skeleton, and you'll feel it click. | 40m |
+| TR 10 | Count Good Nodes | Max-so-far travels **down** as a parameter (C-21). Count travels up. | 20m |
+| TR 14 | Binary Tree Max Path Sum | The hardest tree problem. `max(0, child)` and a global best. Go back and re-do **Diameter (TR 3)** right after — same skeleton, and you'll feel it click. | 40m |
 
 ### D27 — Reconstruction
 **Cold open:** ① C-24 anchor? ② Diameter — global vs returned? ③ *(D25)* BST inorder property?
 **Learn:** C-25.
 
-| # | Problem | Guidance | Cap |
+| NeetCode | Problem | Guidance | Cap |
 |---|---|---|---|
-| 105 | Build Tree from Preorder+Inorder | `preorder[0]` is the root; find it in inorder to split left/right. Use a value→index dict to avoid an O(n) search each time. | 30m |
-| 297 | Serialize and Deserialize | Preorder with `N` markers. Deserialize with a moving index. | 30m |
+| TR 13 | Build Tree from Preorder+Inorder | `preorder[0]` is the root; find it in inorder to split left/right. Use a value→index dict to avoid an O(n) search each time. | 30m |
+| TR 15 | Serialize & Deserialize | Preorder with `N` markers. Deserialize with a moving index. | 30m |
 
 ### D28 — **TIER 1 EXIT GATE.** See `gates/tier-1-exit.md`.

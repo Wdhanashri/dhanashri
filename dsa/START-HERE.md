@@ -11,7 +11,7 @@ Is there anything OVERDUE in ledger.md?
         │
     YES ├──→ Do ONLY the overdue reviews today. No new material. Stop.
         │
-    NO  └──→ Go to your current week file → do the next unticked Day.
+    NO  └──→ Open your current day file (start: `week-1/d1.md`). Top to bottom.
 ```
 
 That's it. There is no third option. You never have to decide what to study.
@@ -35,7 +35,7 @@ That's it. There is no third option. You never have to decide what to study.
 | File | When you open it |
 |---|---|
 | `ledger.md` | **Every single day, first thing.** It tells you what to recall. |
-| `week-N.md` | Today's session |
+|  `week-1/dN.md` | Today's session — one file, top to bottom |
 | `mistakes.md` | Every time you get something wrong |
 | `anchors.md` | 5 minutes, out loud, once a week — and the morning of any interview |
 | `00-map.md` | Sunday, to see where you are |

@@ -24,12 +24,12 @@ On paper, from memory, no notes:
 
 From an empty file. No notes, no editor autocomplete, no looking anything up. Set a timer per problem.
 
-| # | Problem | Tests | Time |
+| NeetCode | Problem | Tests | Time |
 |---|---|---|---|
-| 347 | Top K Frequent | Hashing + bucket sort | 15m |
-| 424 | Longest Repeating Char Replacement | Sliding window + invariant | 20m |
-| 33 | Search in Rotated Sorted Array | Binary search | 20m |
-| 98 | Validate BST | Tree recursion + info-down | 20m |
+| A&H 5 | Top K Frequent | Hashing + bucket sort | 15m |
+| SW 3 | Longest Repeating Char Replacement | Sliding window + invariant | 20m |
+| BS 5 | Search in Rotated Sorted Array | Binary search | 20m |
+| TR 11 | Validate BST | Tree recursion + info-down | 20m |
 
 **Pass:** 3/4 fully working, and you stated the time complexity out loud before coding each one.
 
