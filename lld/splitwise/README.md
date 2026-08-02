@@ -1,21 +1,15 @@
 # Your code lives here
 
-Everything you build in this course accumulates in this folder. By L14 it's a portfolio you can point at.
+Everything you build accumulates here. By S12 it's a portfolio you can point at.
 
 | File | From | What it is |
 |---|---|---|
-| `warmup.py` | L1 | dataclass, Enum, dunder drills |
-| `v0_procedural.py` | L2 | The deliberately ugly version. **Keep it.** |
-| `v1_classes.py` | L3–L8 | Same thing with real classes, growing each session |
-| `library_sketch.py` | L2 | Noun-hunting exercise |
-| `v2_solid.py` | L9–L10 | The SRP/OCP refactor + dependency injection |
-| `final.py` | L11 | **The deliverable.** Strategy + Factory, complete |
-| `DESIGN.md` | L11 | Your written walkthrough |
+| `warmup.py` | S1–S3 | Python drills — copies, identity, generators, decorators |
+| `v1_classes.py` | S4–S7 | Splitwise with real classes, growing each session |
+| `v2_solid.py` | S8–S9 | SRP/OCP refactor + dependency injection |
+| `final.py` | S10 | **The deliverable.** Strategy + Factory, complete |
+| `DESIGN.md` | S10 | Your written walkthrough |
 
-## Why v0 stays
+**Two files one level up:** `../parking_lot.py` (S11) and `../vending_machine.py` (S12) — your two design answers.
 
-Don't delete the ugly version. On a bad day, open both files side by side — that diff is the clearest evidence you have that you learned something real.
-
-## Two files that live one level up
-
-`../parking_lot.py` (L13) and `../vending_machine.py` (L14) — the two interview answers.
+**Keep `warmup.py`.** Before an interview, reopening your own decorator and generator experiments beats rereading any explanation of them.

@@ -1,36 +1,71 @@
-# START HERE — Python + OOP + LLD
+# Python · OOP · Design
 
-**14 sessions. ~70 minutes each. At the end you can write OOP code that works, and answer a basic LLD interview question.**
+**12 sessions. ~70 min each. 23 concepts. 6 files.**
 
----
-
-## What this course actually is
-
-You will build **one thing**, all the way through: a Splitwise clone. It starts as an ugly dict on L2 and ends as a clean, extensible design on L11 that you could put on a whiteboard in an interview.
-
-Every concept gets introduced *because the current code hurts*. Never as a definition first.
-
-> Most OOP courses teach you the four pillars and leave you unable to write a class from scratch. That gap is the whole reason this course is shaped the way it is: **you write code in every single session.**
+At the end you can hold a Python + OOP technical round, and answer a basic design question.
 
 ---
 
-## When to do these
+## Where the time goes — and why
 
-**3 sessions a week, alongside DSA.** Finishes in about 5 weeks.
+```
+Python vocabulary   S1  S2  S3            ████████        25%
+OOP mastery         S4  S5  S6  S7        ██████████      33%
+SOLID & patterns    S8  S9  S10           ████████        25%
+Design (LLD)        S11 S12               █████           17%
+```
 
-These use a different part of your brain than DSA does, so they slot into lighter days well. Never do an LLD session and a DSA session back to back if you're tired — split them across morning and evening, or take the day.
+**This split is deliberate.** At fresher level you get *one* design question, at basic difficulty. But you'll be asked about `self`, generators, decorators, the four pillars and SOLID in **every single round**. So the weight sits where the questions are.
+
+Everything here is something interviewers **actually ask**, in these words. Nothing is "useful background."
+
+---
+
+## Your 6 files
+
+```
+START-HERE.md      ← you are here
+ledger.md          ← open first, every session
+rapid-fire.md      ← anchors + 40 Q&A + syntax lookup. Your revision file forever.
+mistakes.md        ← every wrong or vague answer
+
+p1-python.md       S1  S2  S3     copies & identity · idioms · generators, decorators, GIL
+p2-oop.md          S4  S5  S6  S7 classes · dunders · inheritance & MRO · polymorphism
+p3-design.md       S8  S9  S10    SRP/OCP · L,I,D · Strategy + Factory → Splitwise done
+p4-interview.md    S11 S12        Observer · 6-step method + Parking Lot · GATE
+
+splitwise/         your code lives and grows here
+```
+
+**Each part file holds 3–4 sessions.** Do **one session per sitting** and stop at the horizontal rule. Never two in a day.
+
+---
+
+## The running project
+
+From S4 you build **one thing**: a Splitwise clone. It starts ugly and ends as a clean, extensible design in S10 you could put on a whiteboard.
+
+Every concept arrives *because the current code hurts* — never as a definition first.
+
+> Most OOP courses teach the four pillars and leave you unable to write a class from scratch. That gap is why this course is shaped the way it is: **you write code in every single session.**
 
 ---
 
 ## The one decision tree
 
 ```
-Is there anything OVERDUE in ledger.md?
+Anything OVERDUE in ledger.md?
         │
-    YES ├──→ Do only those recalls. 15 minutes. Then stop or continue.
+    YES ├──→ Do only those recalls. 15 min. Then stop or continue.
         │
-    NO  └──→ Open your next lesson file. Top to bottom.
+    NO  └──→ Next session in your current part file. Top to bottom.
 ```
+
+---
+
+## When
+
+**3 sessions a week, alongside DSA.** Finishes in ~4 weeks. Different part of your brain than DSA, so these slot into lighter days.
 
 ---
 
@@ -39,32 +74,40 @@ Is there anything OVERDUE in ledger.md?
 | # | Rule | Why |
 |---|---|---|
 | 1 | **Type every code block yourself.** Never copy-paste. | Your fingers learn syntax; your eyes don't. |
-| 2 | **Blank page before notes.** Marked ✍️. | Reading feels like learning. Writing from memory *is* learning. |
-| 3 | **Every 🔨 must actually run.** | "It looks right" is not the bar. Run it. |
-| 4 | **70-minute cap.** Hard stop. | Even mid-exercise. Finish next session. |
-| 5 | **Every mistake → `mistakes.md`.** | Untracked mistakes repeat. |
+| 2 | **Blank page before notes.** Marked ✍️. | Reading feels like learning. Writing from memory *is*. |
+| 3 | **Every 🔨 must actually run.** | "It looks right" is not the bar. |
+| 4 | **70-minute cap.** Hard stop, even mid-exercise. | Finish next session. |
+| 5 | **Say every answer out loud.** | This subject is tested verbally, 100% of the time. |
 
 ---
 
-## Your files
+## The 23 concepts
 
-| File | When |
+| Part | Concepts |
 |---|---|
-| `ledger.md` | Start of every session |
-| `l1.md` … `l14.md` | The session itself, top to bottom |
-| `splitwise/` | Where your code lives and grows |
-| `cheatsheet.md` | While coding — syntax lookup, no shame |
-| `anchors.md` | 5 min once a week, and before any interview |
-| `mistakes.md` | Every time something breaks |
+| **Python** | P-01 mutable/immutable · P-02 copies & identity · P-03 containers · P-04 idioms · P-05 exceptions · P-06 generators · P-07 decorators · P-08 GIL & `with` |
+| **OOP** | O-01 `self` & class vars · O-02 dataclass/Enum/method types · O-03 dunders · O-04 encapsulation · O-05 composition · O-06 inheritance · O-07 MRO · O-08 polymorphism · O-09 ABC |
+| **Design** | D-01 SRP · D-02 OCP · D-03 LSP·ISP·DIP · D-04 Strategy · D-05 Factory · D-06 Observer |
+| **LLD** | L-01 The 6-step method |
+
+---
+
+## What "done" looks like
+
+- [ ] Answer 25 of the 30 rapid-fire questions cleanly, out loud
+- [ ] Write a decorator, an ABC and a `@property` from a blank file
+- [ ] Explain all four pillars and all five SOLID letters with examples, under 3 minutes each
+- [ ] Turn a basic design problem into 4–6 sensible classes in 35 minutes
+- [ ] Justify one pattern — **and one you deliberately didn't use**
+
+That last line matters. **Over-engineering is the most common way freshers fail a design round.**
 
 ---
 
 ## The thing to hold on to
 
-You already do this in DSA: you look at a problem and ask *"which pattern is this?"*
+You already do this in DSA: look at a problem and ask *"which pattern is this?"*
 
 OOP is the same skill, different question: **"what are the things here, and what does each one know?"**
 
-That's it. That's the whole subject. Everything else — the pillars, SOLID, the patterns — exists to answer that one question well.
-
-**Now open `ledger.md`, then `l1.md`.**
+**Now open `ledger.md`, then `p1-python.md`.**
