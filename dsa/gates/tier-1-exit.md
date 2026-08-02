@@ -1,0 +1,81 @@
+# Tier 1 Exit Gate — D28
+
+**This is a locked door.** Tier 2 (graphs, DP, backtracking) is built directly on top of these eight algorithms. Walking through this door shaky doesn't save time — it means re-learning Tier 1 in Week 8, when you have no room left.
+
+Budget: **150 minutes.** One sitting. Notes closed. Phone in another room.
+
+---
+
+## Part A · Blank page — 25 min
+
+On paper, from memory, no notes:
+
+1. All **25 anchors**. (Look at `00-map.md`'s concept list only if you need the concept *names* — never the anchors themselves.)
+2. The **binary search template**, exactly.
+3. The **four reversal lines**, in order.
+4. The **BFS level-order skeleton**.
+5. The **tree recursion skeleton**.
+
+**Pass:** 20/25 anchors + all four code skeletons correct.
+
+---
+
+## Part B · Cold problems — 75 min
+
+From an empty file. No notes, no editor autocomplete, no looking anything up. Set a timer per problem.
+
+| # | Problem | Tests | Time |
+|---|---|---|---|
+| 347 | Top K Frequent | Hashing + bucket sort | 15m |
+| 424 | Longest Repeating Char Replacement | Sliding window + invariant | 20m |
+| 33 | Search in Rotated Sorted Array | Binary search | 20m |
+| 98 | Validate BST | Tree recursion + info-down | 20m |
+
+**Pass:** 3/4 fully working, and you stated the time complexity out loud before coding each one.
+
+---
+
+## Part C · Out loud — 25 min
+
+No notes. Record yourself on your phone and listen back — you will hear the stalls you can't feel while talking.
+
+1. **"Walk me through how you'd solve Two Sum, and why the hash map version is better."** (2 min)
+2. **"Explain why a sliding window is O(n) and not O(n²)."** (2 min)
+3. **"How does Floyd's cycle detection work, and why must the pointers meet?"** (3 min)
+4. **"Given an unseen problem, how do you decide which pattern to use?"** — walk through the pattern-picker table in `anchors.md` from memory. (3 min)
+
+**Pass:** all four with no stalling longer than 5 seconds, and no "umm, I think it's something like…"
+
+---
+
+## Part D · Mistake Book audit — 25 min
+
+1. Re-solve every unretired row in `mistakes.md`, cold.
+2. Count your tags. Write the dominant one here → `________`
+3. Apply the fix from the table in `mistakes.md`. If it's `careless`, write your pre-submit checklist **today** and tape it to your monitor.
+
+**Pass:** no row fails twice.
+
+---
+
+## Scoring
+
+| Result | What happens next |
+|---|---|
+| **All four parts pass** | ✅ Tier 1 is done. 8 of your 15 algorithms are real. Start Tier 2 — and the Tier 1 reviews scheduled for D29–D43 in `ledger.md` continue running alongside it. Do not drop them. |
+| **One part fails** | Take **only** the failed concepts back to +1 day. Re-teach from the anchor. Retest that part in 3 days. Everything else stays passed. |
+| **Two or more fail** | Add a 5th week: nothing new, only the 🔴 and 🟡 rows plus the Mistake Book. This is not a setback — it's the system doing precisely what it was built to do. |
+
+---
+
+## Before you close this file
+
+Write, in one sentence, the thing you were most surprised you'd forgotten:
+
+> ________________________________________________
+
+That sentence is worth more than the score. It tells you which concept your brain quietly drops when it's under load — and that's the one to over-schedule in Tier 2.
+
+---
+
+**Also honest, and worth saying:** if you passed, you did it by retrieving 60 problems cold across four weeks — not by reading them. That's a different skill from the one you had four weeks ago, and it's the one interviews actually test.
