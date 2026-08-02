@@ -10,15 +10,15 @@
 |---|---|
 | "Processes are separate houses. Threads are rooms in one house." | OS-01 Process vs Thread |
 | "Save everything, load everything else — and the cache goes cold." | OS-02 Context switch |
-| "Who runs next, and can you interrupt them?" | OS-03 Scheduling |
+| "Who runs next, and can you interrupt them?" · *"Ek truck aage, poori line peeche"* | OS-03 Scheduling |
 | "Your code can't touch hardware. It has to ask." | OS-04 User/kernel mode |
-| "Two threads, one variable, and the answer depends on luck." | OS-05 Race condition |
+| "Two threads, one variable, and the answer depends on luck." · *"Dono ne purana balance dekha"* | OS-05 Race condition |
 | "Mutex is one key. Semaphore is N keys." · *"ek chabi / N chabiyan"* | OS-06 Mutex vs Semaphore |
 | "You let go first. No, you let go first." · *"Tu pehle chhod"* | OS-07 Deadlock |
 | "Prevent it, dodge it, detect it — or ignore it." | OS-08 Handling deadlock |
 | "Small desk, many books." · *"Mez chhoti, kitaabein zyada"* | OS-09 Virtual memory |
 | "Paging cuts by size. Segmentation cuts by meaning." | OS-10 Paging vs segmentation |
-| "Not in RAM? Stop, fetch from disk, resume." | OS-11 Page fault · TLB |
+| "Not in RAM? Stop, fetch from disk, resume." · *"Kitaab mez pe nahi? Almari se laao"* | OS-11 Page fault · TLB |
 | "More time swapping than working." · *"Kaam kam, saaman badalna zyada"* | OS-12 Thrashing |
 
 ---

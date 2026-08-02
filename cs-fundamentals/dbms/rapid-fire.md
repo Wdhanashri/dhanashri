@@ -9,7 +9,7 @@ Cover the right column. Answer out loud. 5 min for anchors, 15 for the full set.
 | Anchor | → |
 |---|---|
 | "A key is a promise of uniqueness. A foreign key is a promise about someone else." | DB-01 Keys |
-| "Store a fact once, point to it from everywhere else." | DB-02 Normalization |
+| "Store a fact once, point to it from everywhere else." · *"Ek baat, ek hi jagah"* | DB-02 Normalization |
 | "Normalize for correctness. Denormalize for speed." | DB-03 Denormalization |
 | "Many-to-many always needs a third table." | DB-04 Relationships |
 | "INNER keeps matches. OUTER keeps orphans too." | DB-05 Joins |
@@ -17,7 +17,7 @@ Cover the right column. Answer out loud. 5 min for anchors, 15 for the full set.
 | "A subquery answers once. A correlated one answers per row." | DB-07 Subqueries · windows |
 | "Five queries. Everything else is a variation." | DB-08 The 5 queries |
 | "All or nothing · rules never break · as if alone · survives a crash." | DB-09 ACID |
-| "Three ways to be lied to. Pick which you'll tolerate." | DB-10 Isolation |
+| "Three ways to be lied to. Pick which you'll tolerate." · *"Jitna sakht, utna dheema"* | DB-10 Isolation |
 | "A book's index — you don't read the whole book." · *"Kitaab ka index"* | DB-11 Indexing |
 | "SQL for relationships. NoSQL for scale." | DB-12 SQL vs NoSQL · CAP |
 
