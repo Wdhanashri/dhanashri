@@ -91,6 +91,6 @@ You may start Tier 2 only when **all** of these are true:
 - [ ] All 60 problems attempted, none skipped without being logged
 - [ ] `ledger.md` shows **zero 🔴** and **at most three 🟡**
 - [ ] Every mistake in `mistakes.md` has been re-tested at least once
-- [ ] `gates/tier-1-exit.md` passed — all three parts
+- [ ] `week-4/d28.md` passed — all three parts
 
 If you fail the exit gate, you do **not** repeat Tier 1. You repeat only the concepts that failed. Everything you passed stays passed.
