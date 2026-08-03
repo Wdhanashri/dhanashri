@@ -1,0 +1,170 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+        {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+        \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4} \\
+                \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+        \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & \textit{\small #2} \\
+                \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+        \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1 & #2 \\
+                \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt, parsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=2pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+        \textbf{\Huge \scshape Dhanashri Wankhade} \\ \vspace{2pt}
+        {\small Software Engineer $|$ Full-Stack \& AI (React, FastAPI, Python) $|$ Open-Source Contributor \textemdash{} 4 Merged PRs} \\ \vspace{2pt}
+        \small +91 9307756214 $|$ \href{mailto:dhanashriwankhade30@gmail.com}{dhanashriwankhade30@gmail.com} $|$
+        \href{https://linkedin.com/in/dhanashri-wankhade-7b8377345}{LinkedIn: dhanashri-wankhade} \\ \vspace{1pt}
+        \href{https://github.com/Wdhanashri}{GitHub: Wdhanashri} $|$
+        \href{https://leetcode.com/u/Wdhanashri/}{LeetCode: Wdhanashri} $|$ Vadodara, India
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Parul Institute of Technology, Parul University}{2023 -- 2027}
+      {B.Tech in Computer Science with Artificial Intelligence \textemdash{} CGPA: 7.58}{Vadodara, Gujarat}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks, Artificial Intelligence}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt, parsep=0pt]
+    \small{\item{
+      \textbf{Languages:} Java, Python, C++, C, JavaScript, SQL \\
+      \textbf{Frameworks \& Libraries:} React, FastAPI, Bootstrap, JSP, Servlets, HTML, CSS \\
+      \textbf{Databases \& Cloud:} MySQL, Supabase (PostgreSQL) \\
+      \textbf{Tools \& APIs:} Git, GitHub, GitHub Actions, VS Code, REST APIs, Google Maps API, Razorpay, Jekyll \\
+      \textbf{CS Fundamentals:} Data Structures \& Algorithms, OOP, DBMS, Operating Systems, Computer Networks
+    }}
+ \end{itemize}
+
+%-----------OPEN SOURCE-----------
+\section{Open Source Contributions}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{preCICE Website} $|$ \emph{Jekyll, JavaScript, CSS, Documentation}}{\href{https://github.com/precice/precice.github.io}{GitHub}}
+    \resumeItemListStart
+      \resumeItem{\textbf{Merged 4 PRs} (\href{https://github.com/precice/precice.github.io/pull/730}{\#730}, \href{https://github.com/precice/precice.github.io/pull/732}{\#732}, \href{https://github.com/precice/precice.github.io/pull/735}{\#735}, \href{https://github.com/precice/precice.github.io/pull/737}{\#737}) into the official preCICE website, an open-source docs platform for the multi-physics simulation community, working through maintainer code review and issue discussion.}
+      \resumeItem{\textbf{Restored print-to-web QR navigation} by replacing the deprecated Google Charts QR API with \texttt{qrcode-generator} v1.4.4 and adding print-only CSS for generated documentation pages.}
+      \resumeItem{\textbf{Improved privacy and dependency hygiene} by auditing third-party scripts, removing the unmaintained \texttt{jquery.cookie} dependency, and verifying cookieless behavior with Algolia and Plausible Analytics.}
+      \resumeItem{\textbf{Prototyped a full website modernization} \textemdash{} dark-mode toggle (CSS variables + \texttt{localStorage}) and a GitHub-API contributors section; \href{https://precice-modernized.netlify.app/}{live demo} deployed on Netlify.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{CartWise \textemdash{} AI-Powered Grocery Shopping Application} $|$ \emph{React, FastAPI, Python, Supabase, Grok LLM, Google Maps API, Razorpay}}{}
+        \resumeItemListStart
+          \resumeItem{Built a full-stack, AI-powered grocery platform delivering OCR-based bill scanning, personalized health-aware product recommendations, nearby store discovery, and secure online payments.}
+          \resumeItem{Integrated \textbf{Grok LLM} for intelligent product and health analysis, \textbf{Google Maps API} for location-based store search, and \textbf{Razorpay} for end-to-end digital payment processing.}
+          \resumeItem{Engineered the backend with \textbf{FastAPI} and \textbf{Supabase (PostgreSQL)}, implementing JWT/OTP authentication, session management, and response caching for secure, low-latency access.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements \& Activities}
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt, parsep=0pt]
+      \resumeItem{\textbf{Selected for the 2026 MCUT Summer Camp}, Ming Chi University of Technology, Taiwan \textemdash{} a competitive, internationally selective program admitting limited seats per partner institution across 11+ countries; accommodation fully sponsored by MCUT.}
+      \resumeItem{Solved \textbf{170+ LeetCode problems} across data structures and algorithms.}
+      \resumeItem{\textbf{Finalist}, MIC Master Competition; competed in the National-Level (Parul University) and Vadodara hackathons.}
+ \end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt, parsep=0pt]
+      \resumeItem{Generative Artificial Intelligence (Gen AI); Design and Analysis of Algorithms \textemdash{} CodeTantra; Modern Software Web Development \textemdash{} CodeTantra.}
+ \end{itemize}
+
+%-----------LANGUAGES-----------
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt, parsep=0pt]
+      \resumeItem{English, Hindi, Marathi, Japanese (Beginner)}
+ \end{itemize}
+
+\end{document}
