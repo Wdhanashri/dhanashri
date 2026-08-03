@@ -1,6 +1,6 @@
 # HLD — awareness level, one file
 
-**~90 minutes total. Read once, then only ever use the drill at the bottom.**
+**~45 minutes total. Read once, then only ever use the drill at the bottom.**
 
 ---
 
@@ -103,62 +103,7 @@ INVALIDATION  data changed → the cache is now LYING
 
 ---
 
-## ⑤ Numbers worth having
-
-You'll never be asked to compute precisely. You *will* sound credible if these are roughly right.
-
-```
-memory read     ~100 ns          │   1 million users
-SSD read        ~100 µs          │   × 10 requests/day
-network, same DC ~0.5 ms         │   = 10M req/day ≈ 120 req/sec average
-network, cross-country ~50 ms    │   peak ≈ 3-5× average
-DB query        ~1-10 ms         │
-                                 │   1 KB × 10M = 10 GB/day
-cache ≈ 100× faster than disk    │   × 365 ≈ 3.6 TB/year
-```
-
-**The move:** when asked to estimate, say your assumptions out loud — *"assume a million users, ten requests each per day"* — then do simple arithmetic. **Nobody checks the number. They check that you have a method.**
-
----
-
-## ⑥ One worked design — URL shortener
-
-The classic, and it exercises everything above. **Know this one cold; the shape transfers.**
-
-**1 · Clarify** → How many URLs/day? Custom aliases? Do links expire? Do we need analytics?
-*Assume: 10M writes/day, 100:1 read:write, 7-char codes, no expiry.*
-
-**2 · The core problem** — long URL → short code, and back.
-```
-POST /shorten  {url}  →  {short: "abc1234"}
-GET  /abc1234         →  301 redirect to the long URL
-```
-
-**3 · Generating the code**
-```
-OPTION A  hash(url) → take 7 chars     ← collisions possible, must check
-OPTION B  counter + base62 encode      ← no collisions, but predictable & sequential
-          62^7 ≈ 3.5 trillion codes — plenty
-```
-Say the trade-off. **That's the whole question** — everything else is plumbing.
-
-**4 · Storage** → key-value, `short_code → long_url`. **NoSQL fits**: no joins, no relations, pure lookup by key.
-
-**5 · Scale it**
-```
-read-heavy (100:1)  →  CACHE the hot codes in Redis. Huge win.
-                    →  read replicas for the DB
-                    →  load balancer in front of the app servers
-                    →  shard by short_code once one DB isn't enough
-```
-
-**6 · Pre-empt the follow-up** — *"Analytics? I'd fire a click event onto a message queue so the redirect stays fast."*
-
-> ✍️ **Blank page, 6 min.** Draw the whole thing from memory: the two endpoints, the two code-generation options with their trade-off, where the cache sits.
-
----
-
-## ⑦ The question you'll actually get
+## ⑤ The question you'll actually get
 
 > *"How would you scale your project?"*
 
@@ -193,14 +138,12 @@ Answer it in this order, every time — **four sentences, forty seconds**:
 10.  Replication — where do writes go? Reads?
 11.  When do you shard, and what gets harder?
 12.  Give one thing that belongs on a message queue.
-13.  SQL or NoSQL for a URL shortener — and why?
+13.  SQL vs NoSQL — when each?
 14.  Monolith or microservices to start — and why?
 15.  CAP — the correct phrasing, not "pick 2 of 3".
-16.  Roughly how much faster is cache than disk?
-17.  1M users × 10 requests/day ≈ how many req/sec?
-18.  URL shortener — the two ways to make a code, and the trade-off?
-19.  "How would you scale your project?" — your four sentences.
-20.  Why would you *refuse* to add sharding?
+16.  Sync vs async — what goes async?
+17.  "How would you scale your project?" — your four sentences.
+18.  Why would you *refuse* to add sharding?
 ```
 
 <details><summary>Answers</summary>
@@ -217,17 +160,15 @@ Answer it in this order, every time — **four sentences, forty seconds**:
 10. Writes → primary. Reads → replicas.
 11. When one machine can't hold the data. Cross-shard joins and transactions get painful.
 12. Emails, notifications, report generation, video encoding, analytics events.
-13. NoSQL — pure key-value lookup, no relations, no joins.
+13. SQL for relational data needing ACID (payments, orders). NoSQL for loose schemas or horizontal scale (logs, feeds).
 14. Monolith — simpler, faster to build. Split only when needs actually diverge.
 15. During a partition you choose C or A. Partition tolerance isn't optional.
-16. ~100×.
-17. ~120/sec average, peak 3–5× that.
-18. Hash-and-truncate (collisions possible) vs counter+base62 (no collisions, predictable).
-19. Where it breaks → cache → replicas + LB → sharding only if forced.
-20. Because it isn't needed yet, and it makes joins and transactions much harder. **Complexity you don't need is a cost, not a credential.**
+16. Anything the user doesn't need the result of right now — emails, reports, video processing.
+17. Where it breaks → cache → replicas + LB → sharding only if forced.
+18. Because it isn't needed yet, and it makes joins and transactions much harder. **Complexity you don't need is a cost, not a credential.**
 </details>
 
-**Score:** __/20. Under 16 → redo the drill in 3 days. Over 16 → you're done; keep it alive below.
+**Score:** __/18. Under 14 → redo the drill in 3 days. Over 14 → you're done; keep it alive below.
 
 ---
 
