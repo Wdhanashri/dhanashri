@@ -30,6 +30,8 @@ You are building courses for **one specific learner**. Not a generic student. Ev
 
 **Your job:** convert her effort — which is already maximal — from re-exposure into retrieval. Everything in this skill is a mechanism for that conversion.
 
+**And there is a second reason, which matters more than the first.** Smith, Floerke & Thomas (*Science*, 2016) put both groups under acute stress before testing. The studiers' recall **collapsed**; the retrieval-practice group's **did not move**. Retrieval doesn't just build a stronger memory — it builds one that survives stress. An interview *is* acute stress. So when she says *"I knew it, my mind went blank"*, that is not nerves to be managed. It is a memory built the wrong way. **Tell her this once, early** — it converts the system from a chore into the thing that protects her on the day.
+
 ---
 
 ## THE SEVEN LAWS (violate none of these)
@@ -103,6 +105,8 @@ Interval rule after each review:
 - 🟡 → repeat the same interval
 - 🔴 → back to +1 day, and re-teach the concept from the anchor up
 
+**Never mark a concept on the day you taught it.** A judgement made right after studying is based on how *smooth* the material feels, not on whether it will come back — which is the fluency illusion wearing a different hat, and it is why self-marking usually runs optimistic. Delayed judgements are far better calibrated. So a new concept **stays 🔴 until its first cold open earns it a mark.** She never grades herself on fresh material.
+
 ---
 
 ## THE DAILY LOOP (every day file follows this exactly)
@@ -116,9 +120,10 @@ Interval rule after each review:
 │  • 1 wildcard from anything older                            │
 │ Then open notes and mark each ✅ / ⚠️ / ❌ herself.           │
 └──────────────────────────────────────────────────────────────┘
-┌─ 2. THE HOOK — 3 min ───────────────────────────────────────┐
-│ A problem she cannot yet solve, or a result that looks wrong.│
-│ Never open with a definition. Curiosity first, theory after. │
+┌─ 2. THE PRETEST — 3 min ────────────────────────────────────┐
+│ 2 questions about material she has NOT been taught yet.      │
+│ She must WRITE A GUESS. Getting them wrong is the norm.      │
+│ Never open with a definition. The failed guess IS the tool.  │
 └──────────────────────────────────────────────────────────────┘
 ┌─ 3. NEW MATERIAL — max 3 concepts, ~25 min ─────────────────┐
 │ Each concept = Anchor → Diagram → 150 words → The Gotcha    │
@@ -144,6 +149,8 @@ Interval rule after each review:
 ```
 
 **Total: ~90 minutes.** If she has more time, add practice volume (step 5) — never add new concepts.
+
+**Why step 2 is a pretest, not a hook.** Richland, Kornell & Kao (2009) had people guess at answers before reading a passage, then analysed **only the items they got wrong**. Those items were still learned better than by extra studying. A failed guess primes the gap so the answer lands in it. So: she must *commit an answer* — thinking "hmm, no idea" does nothing. **Say out loud that wrong is expected**, or she'll experience the pretest as failure and quietly skip it.
 
 ---
 
@@ -283,7 +290,8 @@ Default when the intent is unclear: read `ledger.md`, tell her what's overdue, a
 - [ ] Every concept has an anchor and a recall prompt
 - [ ] `ledger.md` exists with all concepts scheduled at 0/+1/+3/+7/+16/+35
 - [ ] No day introduces more than 3 new concepts
-- [ ] Every day opens with retrieval from *previous* days, not new material
+- [ ] Every day opens with retrieval from *previous* days, then a 2-question PRETEST on today's unseen material
+- [ ] New concepts stay 🔴 until a later cold open marks them — never graded same-day
 - [ ] Blank-page step present in every single day file
 - [ ] Blocked practice before interleaved practice for each new concept
 - [ ] Every pattern starts at rung 1 or 2 of the faded ladder and reaches rung 4 before its gate
